@@ -7,13 +7,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Instantiate the Account array with initial balances
         Account[] initialAccounts = new Account[] {
             new Account(101, 1000.00),
             new Account(102, 500.00)
         };
 
-        // Pass the array object to the repository manager object
         AccountRepository repo = new AccountRepository(initialAccounts);
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
@@ -47,19 +45,19 @@ public class Main {
                 }
 
                 switch (choice) {
-                    case 1: // Balance
+                    case 1:
                         System.out.printf("Current Balance for Account %d: %.2f\n", 
                                           acc.getAccountNumber(), acc.getBalance());
                         break;
 
-                    case 2: // Deposit
+                    case 2:
                         System.out.print("Enter Deposit Amount: ");
                         double depAmount = scanner.nextDouble();
                         acc.deposit(depAmount);
                         System.out.printf("Deposit Successful. New Balance: %.2f\n", acc.getBalance());
                         break;
 
-                    case 3: // Withdraw
+                    case 3:
                         System.out.print("Enter Withdrawal Amount: ");
                         double drawAmount = scanner.nextDouble();
                         acc.withdraw(drawAmount);
@@ -69,7 +67,7 @@ public class Main {
 
             } catch (InputMismatchException e) {
                 System.out.println("Error: Enter a valid number.");
-                scanner.nextLine(); // Clear buffer input
+                scanner.nextLine();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             } catch (InsufficientFundsException e) {
