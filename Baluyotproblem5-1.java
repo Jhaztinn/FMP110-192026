@@ -1,5 +1,5 @@
 // Programmed by: Jhaztintroy Baluyot
-package com.mycompany.baluyotproblem3;
+package com.mycompany.baluyotproblem5;
 
 import java.util.Scanner;
 
