@@ -17,7 +17,7 @@ public class Main {
         int choice = -1;
         
         while (choice != 0) {
-            System.out.println("\n Menu: 1 Enroll | 2 Drop | 3 List | 4 Find | 0 Exit");
+            System.out.println(" Menu: 1 Enroll | 2 Drop | 3 List | 4 Find | 0 Exit");
             System.out.println("Enter Choice:  ");
             
             if (!scanner.hasNextInt()){
