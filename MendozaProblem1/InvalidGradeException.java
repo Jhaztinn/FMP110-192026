@@ -13,7 +13,6 @@ public class InvalidGradeException extends RuntimeException {
         super("Error: Enter a valid number.");
     }
 
-    // Constructor that accepts a custom message
     public InvalidGradeException(String message) {
         super(message);
     }
